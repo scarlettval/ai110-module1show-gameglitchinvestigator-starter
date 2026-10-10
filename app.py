@@ -108,8 +108,10 @@ st.subheader("Make a guess")
 
 # Reserve spots for the status box and debug info so they can be filled in
 # after the current guess is processed (otherwise they show last run's state).
+# The expander itself is created here (not inside a placeholder) so it stays
+# open across reruns; only its contents are filled in later.
 info_placeholder = st.empty()
-debug_placeholder = st.empty()
+debug_placeholder = st.expander("Developer Debug Info").empty()
 
 
 def render_status():
@@ -118,12 +120,11 @@ def render_status():
         f"Attempts left: {attempt_limit - st.session_state.attempts}"
     )
     with debug_placeholder.container():
-        with st.expander("Developer Debug Info"):
-            st.write("Secret:", st.session_state.secret)
-            st.write("Attempts:", st.session_state.attempts)
-            st.write("Score:", st.session_state.score)
-            st.write("Difficulty:", difficulty)
-            st.write("History:", st.session_state.history)
+        st.write("Secret:", st.session_state.secret)
+        st.write("Attempts:", st.session_state.attempts)
+        st.write("Score:", st.session_state.score)
+        st.write("Difficulty:", difficulty)
+        st.write("History:", st.session_state.history)
 
 raw_guess = st.text_input(
     "Enter your guess:",
