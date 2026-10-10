@@ -55,7 +55,7 @@ debug_placeholder = st.expander("Developer Debug Info").empty()
 
 def render_status():
     info_placeholder.info(
-        f"Guess a number between 1 and 100. "
+        f"Guess a number between {low} and {high}. "
         f"Attempts left: {attempt_limit - st.session_state.attempts}"
     )
     with debug_placeholder.container():
