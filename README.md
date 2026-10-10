@@ -25,15 +25,20 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] Describe the game's purpose - Guess a number game!
+- [x] Detail which bugs you found:
+  - Attempts allowed displayed in settings is not the same as the one in the game. I expected 8, see both 7 and 8 but in reality there.
+  - Developer Debug counter for attempts shows 1 attempt completed before even starting. It should say 0.
+  - Asks to guess number between 1 and 100, I guessed 0 and it said to go lower, guessed 30 said go lower, answer was 25. It should say "go higher" and "go lower" dependsing on if the number submitted is greater or less than the secret number.
+  - Clicking new game does not clean history or let me resubmit a guess. It should do that.
+  - Normal level should say to guess number 1-50, shows 1-100, while hard says 1-50 instead of 1-100.
+- [x] Explain what fixes you applied: Fixes to all of the above!
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. User enters the number 4
+1. User enters the number 4, they must guess number between 1-50 in normal mode
 2. Attempts left is reduced 1 number and game returns "Go LOWER!"
 3. User enters the number 2
 4. Attempts left is reduced 1 number and game returns "Go HIGHER!"
