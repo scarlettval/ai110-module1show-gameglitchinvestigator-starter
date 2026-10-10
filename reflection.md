@@ -5,6 +5,10 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+  Attempts allowed displayed in settings is not the same as the one in the game. I expected same number.
+  Developer Debug counter for attempts shows 1 attempt completed before even starting. It should say 0.
+  Asks to guess number between 1 and 100, I guessed 0 and it said to go lower, guessed 30 said go lower, answer was 25. It should say "go higher" and "go lower" dependsing on if the number submitted is greater or less than the secret number.
+  Clicking new game does not clean history or let me resubmit a guess. It should do that.
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
 
@@ -12,11 +16,11 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 Document at least 3 bugs you found. Add rows as needed.
 
-| Input | Expected Behavior | Actual Behavior | Console Output / Error |
-|-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| Input    | Expected Behavior    | Actual Behavior                                     | Console Output / Error |
+| -------- | -------------------- | --------------------------------------------------- | ---------------------- |
+| guess 0  | Output "go higher"   | "go lower"                                          | none                   |
+| new game | clear history        | history is not cleared                              | none                   |
+| guess 0  | 0 written in history | 0 not written in hisotry, appears after 2nd attempt | none                   |
 
 ---
 
